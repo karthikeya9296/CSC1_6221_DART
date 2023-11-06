@@ -1,0 +1,25 @@
+in swipe.dart line 46
+Flexible(
+                  child: CardSwiper(
+                    controller: controller,
+                    cardsCount: snapshot.data!.size,
+                    onSwipe: _onSwipe,
+                    onUndo: _onUndo,
+                    numberOfCardsDisplayed: 3,
+                    backCardOffset: const Offset(40, 40),
+                    padding: const EdgeInsets.all(24.0),
+                    cardBuilder: (
+                      context,
+                      index,
+                      horizontalThresholdPercentage,
+                      verticalThresholdPercentage,
+                    ) =>
+                        Column(
+                          children:[
+                        cards[index],
+                            Text(snapshot.data.docs.map((e) =>
+                                e.toString();
+                            ))
+                          ])
+                  ),
+                ),
