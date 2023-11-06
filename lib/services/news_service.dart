@@ -7,7 +7,7 @@ class NewsService {
 
   Stream<QuerySnapshot<Map<String, dynamic>>> getNews() {
     //FIXME change back to 100
-    return _db.collection('news').limit(100).snapshots();
+    return _db.collection('news').limit(500).snapshots();
   }
 
   Future<DocumentSnapshot<Map<String, dynamic>>> getFav(String uid) {
