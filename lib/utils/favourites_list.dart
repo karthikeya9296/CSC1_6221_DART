@@ -58,6 +58,9 @@ class _FavListState extends State<FavList> {
                 Article article = Article.fromMap(favList[index]);
                 return Dismissible(
                     key: Key(article.title),
+                    onDismissed: (dir) => {
+                      widget.ns.removeFav([favList[index]])
+                    },
                     child: Card(
                       elevation: 4,
                       margin: const EdgeInsets.all(8),
