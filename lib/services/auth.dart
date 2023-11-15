@@ -39,14 +39,36 @@ class AuthService {
     }
   }
 
+  // Future<void> updateUserData(UserCredential usercred) async {
+  //   DocumentReference userRef = _db.collection('faves').doc(usercred.user?.uid);
+  //
+  //   return userRef.set({
+  //     "uid": usercred.user?.uid,
+  //     "lastActivity": DateTime.now(),
+  //     "favlist": []
+  //   }, SetOptions(merge: true));
+  // }
   Future<void> updateUserData(UserCredential usercred) async {
     DocumentReference userRef = _db.collection('faves').doc(usercred.user?.uid);
-    return userRef.set({
-      "uid": usercred.user?.uid,
-      "lastActivity": DateTime.now(),
-      "favlist": []
-    }, SetOptions(merge: true));
+
+    // Check if the document exists
+    var userDoc = await userRef.get();
+
+    if (userDoc.exists) {
+      // If the document exists, update the "favList"
+      return userRef.update({
+        "lastActivity": DateTime.now(),
+      });
+    } else {
+      // If the document doesn't exist, create a new record with an empty "favList"
+      return userRef.set({
+        "uid": usercred.user?.uid,
+        "lastActivity": DateTime.now(),
+        "favlist": [],
+      });
+    }
   }
+
 
   Future<void> signOut() {
     return _auth.signOut();
