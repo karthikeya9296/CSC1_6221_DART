@@ -24,7 +24,7 @@ clone this repo
 git clone https://github.com/karthikeya9296/CSC1_6221_DART.git
 ```
 
-add a Android emulator and install ios simulator
+add a Android emulator in Android Studio and install an  ios simulator in Xcode
 
 and run 
 ```sh
