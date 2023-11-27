@@ -50,21 +50,21 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDwGcHk5EYlsSAecmzdgULvfel_FYsB2Cg',
-    appId: '1:853778555024:android:bf7e26144342719066f815',
-    messagingSenderId: '853778555024',
-    projectId: 'newsly-app-1764-test',
-    storageBucket: 'newsly-app-1764-test.appspot.com',
+    apiKey: 'YOUR_API_KEY',
+    appId: 'YOUR_APP_ID',
+    messagingSenderId: 'MESSAGE_SENDGRID_ID',
+    projectId: 'newsly-appt',
+    storageBucket: 'newsly-app.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyBF6CffFGk6PHy_uN-cmBNRwcg8OxeB4hY',
-    appId: '1:853778555024:ios:a4bd9cd93339335f66f815',
-    messagingSenderId: '853778555024',
-    projectId: 'newsly-app-1764-test',
-    storageBucket: 'newsly-app-1764-test.appspot.com',
-    androidClientId: '853778555024-949r1kqipiq4q1kp15e55o2c0l5k5idq.apps.googleusercontent.com',
-    iosClientId: '853778555024-ddnsa532mlqd5k9nhngnpv0fo2j9clre.apps.googleusercontent.com',
-    iosBundleId: 'com.example.newsly.newsly',
+    apiKey: 'YOUR_API_KEY',
+    appId: 'YOUR_APP_ID',
+    messagingSenderId: 'MESSAGE_SENDGRID_ID',
+    projectId: 'newsly-appt',
+    storageBucket: 'newsly-app.appspot.com',
+    androidClientId: 'Andoid_client_iud',
+    iosClientId: 'ios_client_id',
+    iosBundleId: 'IOS_BUNDLE_ID',
   );
 }
